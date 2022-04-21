@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=KoHo:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/69ae323611.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @media screen, print {
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: "KoHo", sans-serif;
+        }
+        @media print {
+          @page {
+            margin: 0;
+          }
+        }
+        p {
+          font-size: 16px;
+        }
+        a {
+          list-style: none;
+          color: white;
+        }
+        .page {
+          width: 100%;
+          height: 100vh;
+        }
+        .page,
+        .home {
+          display: flex;
+          flex-direction: row;
+        }
+        .side {
+          width: 262px;
+          background-color: white;
+          color: black;
+          contain: content;
+          border-right: 1px solid black;
+          padding: 0 10px;
+        }
+        .side h1 {
+          font-weight: 900;
+          font-size: 38px;
+          border-bottom: 1px solid #ccc;
+        }
+        .side .section {
+          width: 100%;
+          padding: 12px 0;
+        }
+        .side .section h3 {
+          width: 100%;
+          text-align: center;
+          padding: 6px 0;
+          background-color: white;
+          /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); */
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+        }
+        .side .section .wrap {
+          padding: 3px 0;
+        }
+        .side .section .social-list {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .side .section .social-list a + a {
+          margin-left: 30px;
+        }
+        .side .section .social-list a {
+          font-size: 26px;
+        }
+        .fab {
+          color: black;
+        }
+        .section .eval-bar {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .section .eval-bar .bar {
+          width: 100%;
+          margin: 4px 0;
+          height: 10px;
+          border-radius: 5px;
+          position: relative;
+          background-color: rgb(199, 199, 199);
+          color: #333;
+        }
+        .section .eval-bar .bar .after {
+          content: "";
+          position: absolute;
+          border-radius: inherit;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #333;
+        }
+        .section .eval-bar .eval-word {
+          font-size: 15px;
+        }
+        .main {
+          display: flex;
+          flex-direction: column;
+          width: calc(100% - 220px);
+        }
+        .main .section {
+          width: 100%;
+        }
+        .main .section h2 {
+          padding: 6px 0 6px 4px;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+        }
+        .main .section .body {
+          display: flex;
+          padding: 12px 6px;
+        }
+        .main .section .body .date {
+          width: 100px;
+        }
+        .main .section .body .desc {
+          width: calc(100% - 100px);
+          padding: 0 6px;
+        }
+        .main ul {
+          padding-left: 18px;
+          font-size: 15px;
+        }
+        .main .section + .section {
+          padding-top: 21px;
+        }
+        span.chip {
+          display: inline-block;
+          /* background-color: #03565ca1; */
+          border: 1px solid gray;
+          border-radius: 5px;
+          padding: 2px;
+          min-width: 50px;
+          text-align: center;
+          color: black;
+        }
+        span.chip + span.chip {
+          margin-left: 3px;
+        }
+      }
+    </style>
+    <title>Resume</title>
+  </head>
+
+  <body>
+    <!-- this is a cool comment -->
+    <div class="page home">
+      <div class="side">
+        <h1 style="padding: 10px">Hussein Youssef</h1>
+        <p style="padding: 4px">Computer Engineering Student</p>
+        <div class="section">
+          <h3>Personal Info</h3>
+          <div class="body" style="width: 100%; padding: 10px">
+            <div class="wrap">
+              <h4>Phone</h4>
+              <p>(+20) 1006661212</p>
+            </div>
+            <div class="wrap">
+              <h4>E-mail</h4>
+              <p>husseljoo@gmail.com</p>
+            </div>
+            <div class="wrap">
+              <h4>City</h4>
+              <p>Cairo, Egypt</p>
+            </div>
+          </div>
+          <div class="social-list">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/hussein-youssef-b0a1081a2/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/husseljoo/"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="section">
+          <h3>Technical Skills</h3>
+        </div>
+        <!-- <div class="section"> -->
+        <!--   <h3>Skills</h3> -->
+        <!--   <div class="body" style="padding: 10px; width: 100%"> -->
+        <!--     <div class="wrap"> -->
+        <!--       <h4>Coding</h4> -->
+        <!--       <div class="eval-bar" data-value="90%"> -->
+        <!--         <div class="bar"> -->
+        <!--           <div class="after"></div> -->
+        <!--         </div> -->
+        <!--         <div class="eval-word" style="margin-left: auto"></div> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--     <div class="wrap"> -->
+        <!--       <h4>Debugging</h4> -->
+        <!--       <div class="eval-bar" data-value="85%"> -->
+        <!--         <div class="bar"> -->
+        <!--           <div class="after"></div> -->
+        <!--         </div> -->
+        <!--         <div class="eval-word" style="margin-left: auto"></div> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--     <div class="wrap"> -->
+        <!--       <h4>Database Knowledge</h4> -->
+        <!--       <div class="eval-bar" data-value="65%"> -->
+        <!--         <div class="bar"> -->
+        <!--           <div class="after"></div> -->
+        <!--         </div> -->
+        <!--         <div class="eval-word" style="margin-left: auto"></div> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--     <div class="wrap"> -->
+        <!--       <h4>Problem Solving</h4> -->
+        <!--       <div class="eval-bar" data-value="90%"> -->
+        <!--         <div class="bar"> -->
+        <!--           <div class="after"></div> -->
+        <!--         </div> -->
+        <!--         <div class="eval-word" style="margin-left: auto"></div> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--     <div class="wrap"> -->
+        <!--       <h4>Cybersecurity</h4> -->
+        <!--       <div class="eval-bar" data-value="75%"> -->
+        <!--         <div class="bar"> -->
+        <!--           <div class="after"></div> -->
+        <!--         </div> -->
+        <!--         <div class="eval-word" style="margin-left: auto"></div> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!-- </div> -->
+      </div>
+      <div class="main" style="padding: 10px">
+        <div class="section">
+          <h2>Education</h2>
+          <div class="body">
+            <div class="date">2004-2018 <br /></div>
+            <div class="desc">
+              <p>
+                <strong>
+                  Deutsche Evangelische Oberschule (DEO)
+                  <a
+                    href="https://www.linkedin.com/in/hussein-youssef-b0a1081a2/"
+                    style="color: black"
+                  >
+                  </a>
+                </strong>
+              </p>
+              <ul>
+                <li>Student Union President and Valedictorian</li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="date">2018-2023<br /></div>
+            <div class="desc">
+              <p>
+                <strong>German University in Cairo</strong>
+              </p>
+              <ul>
+                <li>Computer Science and Engineering Student</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Experience</h2>
+          <div class="body">
+            <div class="date">
+              2021<br />
+              Aug - Oct
+            </div>
+            <div class="desc">
+              <p>
+                <strong>
+                  Software Engineering Intern @
+                  <a
+                    target="_blank"
+                    href="https://www.intercom.com.eg/"
+                    style="color: black"
+                  >
+                    Intercom Enterprises
+                  </a>
+                </strong>
+              </p>
+              <ul>
+                <li>
+                  learned and worked on backend systems of Java enterprise
+                  applications
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Projects</h2>
+          <div class="body">
+            <!---->
+            <div class="desc">
+              <p><strong>DB Engine</strong></p>
+              <ul>
+                <li>
+                  a small database engine with support for multi-dimensional
+                  indexes
+                </li>
+                <li>technologies used : <span class="chip">Java</span></li>
+              </ul>
+            </div>
+          </div>
+          <!---->
+          <div class="body">
+            <div class="desc">
+              <p><strong> Airline system website </strong></p>
+              <ul>
+                <li>
+                  collaborated with colleges on creating designing and creating
+                  a website for an Arabian-themed Airline system
+                </li>
+                <li>
+                  technologies used :
+                  <span class="chip">NodeJS</span>
+                  <span class="chip">React</span>
+                  <span class="chip">MongoDB</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!---->
+          <div class="body">
+            <div class="desc">
+              <p><strong>Simulator for MIPS Processor</strong></p>
+              <ul>
+                <li>
+                  implement a simulator for MIPS microprocessor with an
+                  underlying tomasulo architecture to execute simple assembly
+                  programs
+                </li>
+                <li>
+                  technologies used :
+                  <span class="chip">Rust</span>
+                  <span class="chip">Java</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div class="side">
+        <div class="section">
+          <h3>Languages</h3>
+          <div class="body" style="padding: 10px; width: 100%">
+            <div class="wrap">
+              <h4>JavaScript</h4>
+              <div class="eval-bar" data-value="95%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h4>Python</h4>
+              <div class="eval-bar" data-value="90%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h4>SQL</h4>
+              <div class="eval-bar" data-value="75%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h4>Java</h4>
+              <div class="eval-bar" data-value="75%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>Web Technologies</h3>
+          <div class="body" style="padding: 10px; width: 100%">
+            <div class="wrap">
+              <h4>React</h4>
+              <div class="eval-bar" data-value="90%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h4>VueJS</h4>
+              <div class="eval-bar" data-value="95%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h4>NodeJS</h4>
+              <div class="eval-bar" data-value="90%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h4>Flask</h4>
+              <div class="eval-bar" data-value="90%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h4>Electron</h4>
+              <div class="eval-bar" data-value="90%">
+                <div class="bar">
+                  <div class="after"></div>
+                </div>
+                <div class="eval-word" style="margin-left: auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main" style="padding: 20px 10px 10px 10px">
+        <!-- <div class="section"> -->
+        <!--   <h2>Freelancing Projects</h2> -->
+        <!--   <div class="body"> -->
+        <!--     <div class="date">2021</div> -->
+        <!--     <div class="desc"> -->
+        <!--       <p><strong>Full Managment System</strong></p> -->
+        <!--       <ul> -->
+        <!--         <li>a system to manage all the aspects of an online store.</li> -->
+        <!--         <li> -->
+        <!--           technologies used : <span class="chip">ElectronJS</span> -->
+        <!--           <span class="chip">Flask</span> -->
+        <!--           <span class="chip">HTML</span> <span class="chip">CSS</span> -->
+        <!--         </li> -->
+        <!--       </ul> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!-- </div> -->
+        <div class="section">
+          <h2>Another Section</h2>
+          <div class="body">
+            <div class="date">2018</div>
+            <div class="desc">
+              <p><strong>Bla Bla</strong></p>
+              <ul>
+                <li>awarded with bla bla</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Courses & Scholarships</h2>
+          <div class="body">
+            <div class="date">2021</div>
+            <div class="desc">
+              <p>
+                <strong> Bla bla </strong>
+              </p>
+              <ul>
+                <li>worked with bla bla</li>
+                <li>
+                  <a target="_blank" href="" style="color: black"
+                    >link to certificate</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Extracurricular Activities</h2>
+            <div class="body">
+              <div class="date">2021</div>
+              <div class="desc">
+                <p><strong>Source GUC member</strong></p>
+                <ul>
+                  <li>open source collaboration club</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        console.log("Hello There");
+        let evalWords = {
+            "100%": "Expert",
+            "95%": "Advanced",
+            "90%": "Advanced",
+            "85%": "Advanced",
+            "75%": "Advanced",
+            "65%": "Intermediate",
+            "40%": "Basics",
+          },
+          evalBars = document.querySelectorAll(".eval-bar");
+        evalBars.forEach((e) => {
+          e.querySelector(".bar .after").style.width = e.dataset.value;
+          e.querySelector(".eval-word").innerText = evalWords[e.dataset.value];
+        });
+      </script>
+    </div>
+  </body>
+</html>
