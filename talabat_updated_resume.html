@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=KoHo:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/69ae323611.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @media screen, print {
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: "KoHo", sans-serif;
+        }
+        @media print {
+          @page {
+            margin: 0;
+          }
+        }
+        p {
+          font-size: 16px;
+        }
+        a {
+          list-style: none;
+          color: white;
+        }
+        .page {
+          width: 100%;
+          height: 100vh;
+        }
+        .page,
+        .home {
+          display: flex;
+          flex-direction: row;
+        }
+        .side {
+          width: 262px;
+          background-color: white;
+          color: black;
+          contain: content;
+          border-right: 1px solid black;
+          padding: 0 10px;
+        }
+        .side h1 {
+          font-weight: 900;
+          font-size: 38px;
+          border-bottom: 1px solid #ccc;
+        }
+        .side .section {
+          width: 100%;
+          padding: 12px 0;
+        }
+        .side .section .side_title {
+          width: 100%;
+          text-align: center;
+          padding: 6px 0;
+          background-color: white;
+          /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); */
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+        }
+        .side .section .wrap {
+          padding: 3px 0;
+        }
+        .side .section .social-list {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .side .section .social-list a + a {
+          margin-left: 30px;
+        }
+        .side .section .social-list a {
+          font-size: 26px;
+        }
+        .fab {
+          color: black;
+        }
+        .section .eval-bar {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .section .eval-bar .bar {
+          width: 100%;
+          margin: 4px 0;
+          height: 10px;
+          border-radius: 5px;
+          position: relative;
+          background-color: rgb(199, 199, 199);
+          color: #333;
+        }
+        .section .eval-bar .bar .after {
+          content: "";
+          position: absolute;
+          border-radius: inherit;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #333;
+        }
+        .section .eval-bar .eval-word {
+          font-size: 15px;
+        }
+        .main {
+          display: flex;
+          flex-direction: column;
+          width: calc(100% - 220px);
+        }
+        .main .section {
+          width: 100%;
+        }
+        .main .section h2 {
+          padding: 6px 0 6px 4px;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+        }
+        .main .section .body {
+          display: flex;
+          padding: 12px 6px;
+        }
+        .main .section .body .date {
+          width: 100px;
+        }
+        .main .section .body .desc {
+          width: calc(100% - 100px);
+          padding: 0 6px;
+        }
+        .main ul {
+          padding-left: 18px;
+          font-size: 15px;
+        }
+        .main .section + .section {
+          padding-top: 21px;
+        }
+        span.chip {
+          display: inline-block;
+          /* background-color: #03565ca1; */
+          border: 1px solid gray;
+          border-radius: 5px;
+          padding: 2px;
+          min-width: 50px;
+          text-align: center;
+          color: black;
+        }
+        span.chip + span.chip {
+          margin-left: 3px;
+        }
+      }
+    </style>
+    <title>Resume</title>
+  </head>
+
+  <body>
+    <!-- this is a cool comment -->
+    <div class="page home">
+      <div class="side">
+        <h1 style="padding: 10px">Hussein Youssef</h1>
+        <p style="padding: 3px">Computer Engineering Graduate</p>
+        <div class="section">
+          <h3>Personal Info</h3>
+          <div class="body" style="width: 100%; padding: 10px">
+            <div class="wrap">
+              <h4>Phone</h4>
+              <p>(+20) 1006661212</p>
+            </div>
+            <div class="wrap">
+              <h4>E-mail</h4>
+              <p>husseljoo@gmail.com</p>
+            </div>
+            <div class="wrap">
+              <h4>City</h4>
+              <p>Cairo, Egypt</p>
+            </div>
+            <div class="wrap">
+              <h4>Fluent Languages</h4>
+              <p>English, German, Arabic</p>
+            </div>
+            <div class="wrap">
+              <h4>Citizenship</h4>
+              <p>British/Egyptian</p>
+            </div>
+          </div>
+          <div class="social-list">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/hussein-youssef-b0a1081a2/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/husseljoo/"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              target="_blank"
+              href=" https://www.youtube.com/channel/UCLds3RrndAIDnNDaN1Vx1tg"
+              target="_blank"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="side_title">Skills & Knowledge</h3>
+          <div class="body" style="padding: 10px; width: 100%">
+            <div class="wrap">
+              <h3>Databases</h3>
+            </div>
+            <div class="wrap">
+              <h3>Scripting</h3>
+            </div>
+            <div class="wrap">
+              <h3>Linux</h3>
+            </div>
+            <div class="wrap">
+              <h3>Git</h3>
+            </div>
+            <div class="wrap">
+              <h3>Docker</h3>
+            </div>
+            <div class="wrap">
+              <h3>Hadoop</h3>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h3 class="side_title">Languages</h3>
+          <div class="body" style="padding: 10px; width: 100%">
+            <div class="wrap">
+              <h3>Java</h3>
+            </div>
+            <div class="wrap">
+              <h3>Python</h3>
+            </div>
+            <div class="wrap">
+              <h3>SQL</h3>
+            </div>
+            <div class="wrap">
+              <h3>Javascript</h3>
+            </div>
+            <div class="wrap">
+              <h3>Golang</h3>
+            </div>
+            <div class="wrap">
+              <h3>Rust</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main" style="padding: 10px">
+        <div class="section">
+          <h2>Education</h2>
+          <div class="body">
+            <div class="date">2004-2018 <br /></div>
+            <div class="desc">
+              <a
+                target="_blank"
+                href="https://deokairo.com/"
+                style="color: black; text-decoration: none"
+              >
+                <strong> Deutsche Evangelische Oberschule (DEO) </strong>
+              </a>
+              <ul>
+                <li>completed German Abitur (allgemeine Hochschulreife)</li>
+                <li>Student Union President and Valedictorian</li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="date">2018-2023<br /></div>
+            <div class="desc">
+              <a
+                target="_blank"
+                href="https://www.guc.edu.eg/"
+                style="color: black; text-decoration: none"
+              >
+                <strong>German University in Cairo (GUC)</strong>
+              </a>
+              <ul>
+                <li>Computer Science and Engineering BS</li>
+                <li>Excellent with honours</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Experience</h2>
+          <div class="body">
+            <div class="date">
+              2023<br />
+              Jul - Present
+            </div>
+            <div class="desc">
+              <p>
+                <strong>
+                  Software Engineer Intern @
+                  <a
+                    target="_blank"
+                    href="https://www.advcontrolsys.com"
+                    style="color: black"
+                  >
+                    Talabat
+                  </a>
+                </strong>
+              </p>
+              <ul>
+                <li>
+                  added features to the backend infrastructure of the menu
+                  service by and shipped them to production
+                </li>
+                <li>
+                  expanded BFF(backend-for-frontend) capabilities by integrating
+                  modifier plugins from the Lura engine (open-source API
+                  aggregator engine)
+                </li>
+                <li>
+                  implemented new BFF endpoints by crafting custom Golang
+                  plugins
+                </li>
+                <li>
+                  maintained code quality and reliability by adding
+                  comprehensive end-to-end and unit tests
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="date">
+              2022<br />
+              Jul - Aug
+            </div>
+            <div class="desc">
+              <p>
+                <strong>
+                  Data Platform Intern @
+                  <a
+                    target="_blank"
+                    href="https://www.advcontrolsys.com"
+                    style="color: black"
+                  >
+                    Orange Egypt
+                  </a>
+                </strong>
+              </p>
+              <ul>
+                <li>
+                  developed a distributed application that validates HDFS files
+                  on a Hadoop cluster
+                </li>
+                <li>
+                  employed Docker Compose to simulate a clustered distributed
+                  environment, enhancing robust testing and development
+                  capabilities
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Academic Projects</h2>
+          <div class="body">
+            <div class="desc">
+              <p>
+                <strong
+                  >Consensus mechanism for a smart contract ecosystem
+                </strong>
+              </p>
+              <ul>
+                <li>
+                  implementing and simulating a Pos-based consensus mechanism
+                  inspired by Cardano's Ouroboros Consensus that supports
+                  arbitrary on-chain contracts as part of my bachelor thesis
+                  project
+                </li>
+                <li>
+                  technologies used :
+                  <span class="chip">Golang</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="desc">
+              <p>
+                <strong>Minimal Operating System</strong>
+              </p>
+              <ul>
+                <li>
+                  implementation of a minimal bare metal operating system that
+                  does not rely on the standard library
+                </li>
+                <li>
+                  includes: interrupts, memory management and multitasking.
+                </li>
+                <li>
+                  technologies used :
+                  <span class="chip">Rust</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="desc">
+              <p><strong>DB Engine</strong></p>
+              <ul>
+                <li>
+                  a small database engine with support for multi-dimensional
+                  indexes
+                </li>
+                <li>technologies used : <span class="chip">Java</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="desc">
+              <p><strong>Simulator for MIPS Processor</strong></p>
+              <ul>
+                <li>
+                  simulator for MIPS microprocessor with an underlying tomasulo
+                  architecture to execute assembly programs
+                </li>
+                <li>
+                  technologies used :
+                  <span class="chip">Java</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div class="side">
+        <div class="section">
+          <h3 class="side_title">Web Technologies</h3>
+          <div class="body" style="padding: 10px; width: 100%">
+            <div class="wrap">
+              <h3>React</h3>
+            </div>
+            <div class="wrap">
+              <h3>NodeJS</h3>
+            </div>
+            <div class="wrap">
+              <h3>Django</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main" style="padding: 20px 10px 10px 10px">
+        <div class="section">
+          <h2>Courses & Scholarships</h2>
+
+          <div class="body">
+            <div class="date">2021</div>
+            <div class="desc">
+              <p><strong>Udacity Professional Data Analysis</strong></p>
+              <ul>
+                <li>graduated from this program offered by Egypt FWD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Other Projects</h2>
+          <div class="body">
+            <div class="desc">
+              <p><strong>Tutorial switching system</strong></p>
+              <ul>
+                <li>
+                  a switching system that connects GUC students with peers
+                  interested to swap schedules
+                </li>
+                <li>
+                  technologies used : <span class="chip">Django</span
+                  ><span class="chip">React</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="desc">
+              <p><strong> Airline system website </strong></p>
+              <ul>
+                <li>
+                  collaborated with colleges on designing and implementing a
+                  website for an Arabian-themed Airline system
+                </li>
+                <li>
+                  technologies used :
+                  <span class="chip">NodeJS</span>
+                  <span class="chip">React</span>
+                  <span class="chip">MongoDB</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Extracurricular Activities</h2>
+          <div class="body">
+            <div class="date">2021-present</div>
+            <div class="desc">
+              <p><strong>Source GUC member</strong></p>
+              <ul>
+                <li>open source collaboration club</li>
+                <li>participated in various technical workshops</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="body">
+            <div class="date">2020-2021</div>
+            <div class="desc">
+              <p><strong>GUC Brain events & coordination member</strong></p>
+              <ul>
+                <li>machine learning club</li>
+                <li>
+                  participated in organizing ML virtual events with industry
+                  leaders in Egypt and across the globe
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="date">2020-present</div>
+            <div class="desc">
+              <p><strong>GUC innovators</strong></p>
+              <ul>
+                <li>auto learning track member</li>
+                <li>learned about self driving cars</li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="date">2021-present</div>
+            <div class="desc">
+              <p><strong>GUC TCS</strong></p>
+              <ul>
+                <li>university theater logistics member</li>
+              </ul>
+            </div>
+          </div>
+          <div class="body">
+            <div class="date">2020-2021</div>
+            <div class="desc">
+              <p><strong>AIESEC GUC member</strong></p>
+              <ul>
+                <li>
+                  communicated with people interested in joining various
+                  programs run by AIESEC in Egypt
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        let evalWords = {
+            "100%": "Expert",
+            "95%": "Advanced",
+            "90%": "Advanced",
+            "85%": "Advanced",
+            "80%": "Advanced",
+            "75%": "Intermediate",
+            "70%": "Intermediate",
+            "65%": "Intermediate",
+            "40%": "Basics",
+          },
+          evalBars = document.querySelectorAll(".eval-bar");
+        evalBars.forEach((e) => {
+          e.querySelector(".bar .after").style.width = e.dataset.value;
+          e.querySelector(".eval-word").innerText = evalWords[e.dataset.value];
+        });
+      </script>
+    </div>
+  </body>
+</html>
